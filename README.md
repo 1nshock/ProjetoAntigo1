@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Guilherme de Souza, Alecsander Garlindo jr, Yago Nunes, Felipe acierno.
 Projeto Aprende+
 
@@ -12,3 +13,6 @@ Salas --> Funcionalidade de Criar, Editar e Apagar Sala.
 
 Página de Cadastro --> Botão de Escolher tipo de Cadastro (Professor, Aluno & Instituição)
                       Um tipo de Cadastro para Cada Personagem
+=======
+# ProjetoAntigo
+>>>>>>> bfd34bc5b033681ea1c17422b699efe248a970ef
