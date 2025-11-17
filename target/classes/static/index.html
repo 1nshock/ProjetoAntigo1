@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprende+</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">
+    </div>
+    <nav class="navbar">
+      <a href="#" class="nav-link active">Início</a>
+      <a href="menudeensino.html" class="nav-link">Menu de ensino</a>
+      <a href="#" class="nav-link">Planos</a>
+    </nav>
+    <div class="login-button">
+      <a href="#" id="openLogin">Login</a>
+      <span id="userDisplay" style="display:none; margin-right: 20px;"></span>
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌗</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Seja bem-vindo, que comecem os estudos!</h1>
+      <p>
+        Nosso objetivo é proporcionar um aprendizado personalizado e eficaz, auxiliando
+        você a superar desafios e alcançar seus objetivos acadêmicos e profissionais.
+        Com uma vasta biblioteca de atividades e lições complementares em Português e
+        Matemática, oferecemos um conteúdo abrangente e de alta qualidade.
+        Através de testes de proficiência com avaliações, mapeamos suas necessidades e
+        construímos um plano de estudos exclusivo. Junte-se a nós e descubra o seu
+        potencial máximo. Comece já!
+      </p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary">Explorar</a>
+        <a href="#" class="btn">Começar</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="css/img/logomarca.svg" alt="Logo Aprende+" />
+    </div>
+  </section>
+
+
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required />
+        <button type="submit">Entrar</button>
+      </form>
+      <p>Não tem uma conta? <a href="Cadastro.html">Registre-se</a></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Aprende+. Todos os direitos reserFvados.</p>
+    <nav class="footer-nav">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="#">Contato</a>
+    </nav>
+  </footer>
+
+
+<script src="js/user-session.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/test.js"></script>
+<script src="js/login.js"></script>
+</body>
+
+</html>

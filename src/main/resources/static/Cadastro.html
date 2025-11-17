@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro Educacional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="voltar">Voltar</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌗</button>
+    </nav>
+    <div class="container">
+        <div id="menu" class="menu-container">
+            <h1>Formulário Cadastro</h1>
+            <p class="subtitle">Escolha o tipo de cadastro</p>
+
+            <div class="menu-buttons">
+                <button class="btn btn-professor" onclick="showForm('professor')">
+                    Cadastro de Professor
+                </button>
+                <button class="btn btn-instituicao" onclick="showForm('instituicao')">
+                    Cadastro de Instituição
+                </button>
+                <button class="btn btn-aluno" onclick="showForm('aluno')">
+                    Cadastro de Aluno
+                </button>
+            </div>
+        </div>
+
+
+        <div id="form-professor" class="form-container">
+            <button class="btn btn-back" onclick="showMenu()">Voltar</button>
+            <h1>Cadastro de Professor</h1>
+            <p class="subtitle">Preencha seus dados</p>
+
+            <form onsubmit="handleSubmit(event, 'professor')">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label>CPF</label>
+                    <input type="text" name="cpf" required placeholder="000.000.000-00" maxlength="14">
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" name="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Instituição</label>
+                    <input type="text" name="instituicao" required placeholder="Nome da instituição">
+                </div>
+
+                <div class="form-group">
+                    <label>Código do Docente</label>
+                    <input type="text" name="codigo_docente" required placeholder="Digite o código">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" name="password" required placeholder="Digite a senha provisória">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Cadastrar Professor</button>
+            </form>
+        </div>
+
+
+        <div id="form-instituicao" class="form-container">
+            <button class="btn btn-back" onclick="showMenu()">Voltar</button>
+            <h1>Cadastro de Instituição</h1>
+            <p class="subtitle">Preencha os dados da instituição</p>
+
+            <form onsubmit="handleSubmit(event, 'instituicao')">
+                <div class="form-group">
+                    <label>Nome da Unidade</label>
+                    <input type="text" name="nome_unidade" required placeholder="Nome da instituição">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Código</label>
+                        <input type="text" name="codigo" required placeholder="Código">
+                    </div>
+
+                    <div class="form-group">
+                        <label>CNPJ</label>
+                        <input type="text" name="cnpj" required placeholder="00.000.000/0000-00" maxlength="18">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo</label>
+                    <select name="tipo" required>
+                        <option value="">Selecione...</option>
+                        <option value="estadual">Estadual</option>
+                        <option value="privada">Privada</option>
+                        <option value="federal">Federal</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>CEP</label>
+                        <input type="text" name="cep" required placeholder="00000-000" maxlength="9">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número</label>
+                        <input type="text" name="numero" required placeholder="Nº">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input type="tel" name="telefone" required placeholder="(00) 00000-0000" maxlength="15">
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail de Contato</label>
+                    <input type="email" name="email_contato" required placeholder="contato@instituicao.com">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" name="password" required placeholder="Digite a senha provisória">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Cadastrar Instituição</button>
+            </form>
+        </div>
+
+
+        <div id="form-aluno" class="form-container">
+            <button class="btn btn-back" onclick="showMenu()">Voltar</button>
+            <h1>Cadastro de Aluno</h1>
+            <p class="subtitle">Preencha seus dados</p>
+
+            <form onsubmit="handleSubmit(event, 'aluno')">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" name="nome" required placeholder="Digite o nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label>RA (Registro Acadêmico)</label>
+                    <input type="text" name="ra" required placeholder="Digite o RA">
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" name="email" required placeholder="Digite o E-mail">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" name="password" required placeholder="Digite a senha provisória">
+                </div>
+
+                <button type="submit" class="btn btn-submit">Cadastrar Aluno</button>
+            </form>
+        </div>
+    </div>
+<script src="js/user-session.js"></script>
+<script src="js/theme-toggle.js"></script>
+<script src="js/Cadastro-v2.js"></script>
+</body>
+
+</html>
